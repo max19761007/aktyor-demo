@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Имя Фамилия – актёр театра</title>
+<meta name="description" content="Имя Фамилия, актёр театра «Название театра». Роли, фото для кастинга, шоурил и контакты для приглашения на пробы.">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Имя Фамилия – актёр театра">
+<meta property="og:description" content="Роли, фото для кастинга, шоурил и контакты для приглашения на пробы.">
+<meta property="og:url" content="{{адрес сайта}}">
+<meta property="og:image" content="{{адрес сайта}}/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high" media="(min-width: 861px)">
+<link rel="preload" as="image" href="assets/hero-m.webp" fetchpriority="high" media="(max-width: 860px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,300..700;1,8..30,300..700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%274%27 fill=%27%23e7e9e4%27/%3E%3Cpath d=%27M6 22c6-3 13-3 20-1%27 stroke=%27%232440ad%27 stroke-width=%273%27 fill=%27none%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M13 6l-3 11%27 stroke=%27%231d2126%27 stroke-width=%273%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"{{Имя Фамилия}}","jobTitle":"Актёр театра","worksFor":{"@type":"PerformingGroup","name":"{{театр}}"},"url":"{{адрес сайта}}","image":"{{адрес сайта}}/assets/og.jpg"}
+</script>
+<style>
+  /* ---- тема: бумага машинописи, графит и один синий карандаш ------------ */
+  .v-page {
+    --v-canvas: #e7e9e4; --v-surface: #f3f4f1;
+    --v-ink: #1d2126; --v-ink-soft: #575d66;
+    --v-accent: #2440ad; --v-accent-ink: #f3f4f1;
+    --v-font-display: "Piazzolla", Georgia, serif;
+    --v-font-text: "Piazzolla", Georgia, serif;
+    --v-display-weight: 400;
+    --v-track-tight: -0.025em;
+    --v-shadow-color: 40 48 60;
+    --v-e1: 0 1px 2px rgb(var(--v-shadow-color) / .10), 0 8px 22px rgb(var(--v-shadow-color) / .12);
+    --v-e2: 0 2px 6px rgb(var(--v-shadow-color) / .12), 0 24px 60px rgb(var(--v-shadow-color) / .20);
+    --v-radius: 4px;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.875rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --paper-90: color-mix(in oklab, var(--v-canvas) 90%, transparent);
+    --paper-60: color-mix(in oklab, var(--v-canvas) 60%, transparent);
+    --pencil-12: color-mix(in oklab, var(--v-accent) 12%, transparent);
+    font-feature-settings: "kern", "liga", "onum";
+  }
+  html, body { background: #e7e9e4; margin: 0; }
+  .v-page .v-display { font-weight: 400; line-height: 1.02; font-variation-settings: "opsz" 30; }
+  .v-page .v-lede { font-weight: 400; line-height: 1.45; }
+  .v-page .v-btn { border-radius: var(--v-radius); font-size: var(--v-t-base); font-weight: 500; letter-spacing: 0; padding: .9em 1.5em; }
+  .v-page h2 { font-family: var(--v-font-display); font-weight: 400; }
+
+  /* ремарка: курсив в скобках, как в тексте пьесы */
+  .rem { font-style: italic; color: var(--v-ink-soft); font-size: var(--v-t-base); line-height: 1.5; }
+  /* незаполненное поле: видно, что сюда встанут данные актёра */
+  .slot { color: var(--v-ink-soft); text-decoration: underline dotted color-mix(in oklab, var(--v-accent) 55%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: .22em; }
+
+  /* ---- шапка -------------------------------------------------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-4);
+    padding: var(--v-3) var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: var(--paper-90); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__name { font-size: var(--v-t-lg); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; letter-spacing: -.01em; }
+  .bar__nav { display: flex; align-items: center; gap: var(--v-5); }
+  .bar__nav a:not(.v-btn) { text-decoration: none; font-size: var(--v-t-sm); padding: .4em 0; }
+  .bar__nav a:not(.v-btn):hover { text-decoration: underline; }
+  .bar .v-btn { padding: .65em 1.2em; font-size: var(--v-t-sm); }
+  @media (max-width: 860px) { .bar__nav a:not(.v-btn) { display: none; } .bar__name { font-size: var(--v-t-base); } }
+
+  /* ---- 1. первый экран ----------------------------------------------------- */
+  .hero__photo { position: absolute; inset: 0; overflow: hidden; }
+  .hero__photo .v-layer img { position: absolute; left: 0; top: -6%; width: 100%; height: 112%; object-fit: cover; object-position: 72% 40%; }
+  .hero__wash { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, var(--paper-90) 0%, var(--paper-60) 34%, transparent 58%); }
+  .hero__copy { top: clamp(6.5rem, 21vh, 13rem); bottom: auto; max-width: 40rem; }
+  .demo-for { display: inline-flex; align-items: center; gap: .5em; font-size: var(--v-t-xs); color: var(--v-ink-soft);
+    background: var(--paper-90); box-shadow: inset 0 0 0 1px var(--v-hair); border-radius: var(--v-radius); padding: .35em .75em; margin-bottom: var(--v-5); }
+  .hero__rem { display: block; margin-bottom: var(--v-3); }
+  .hero__name { position: relative; display: inline-block; width: min-content; font-size: clamp(3.2rem, 1.4rem + 6.4vw, 7.4rem); line-height: .98; letter-spacing: -.035em; }
+  .hero__name svg { position: absolute; left: -1%; width: 102%; bottom: -.16em; height: .22em; overflow: visible; }
+  .hero__name path { fill: none; stroke: var(--v-accent); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.1s var(--v-ease-out) 1.1s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .hero__copy .hero__role { font-size: var(--v-t-xl); line-height: 1.25; margin-top: var(--v-7); max-width: 26ch; }
+  .hero__copy .hero__lede { margin-top: var(--v-3); color: var(--v-ink-soft); max-width: 36ch; }
+  .hero__cta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--v-3) var(--v-5); margin-top: var(--v-6); }
+  .hero__reel { font-style: italic; text-underline-offset: .25em; min-height: 44px; display: inline-flex; align-items: center; }
+  @media (max-width: 860px) {
+    /* на телефоне фото уходит в нижнюю половину: текст лежит на бумаге, лицо не перекрыто */
+    .hero__photo { top: 46svh; }
+    .hero__photo .v-layer img { object-position: 60% 20%; }
+    .hero__wash { top: 46svh; background: linear-gradient(180deg, var(--v-canvas) 0%, transparent 22%); }
+    .demo-for__order { display: none; }
+    .hero__copy { top: clamp(4.75rem, 11svh, 6rem); }
+    .hero__name { font-size: clamp(2.6rem, 11vw, 3.4rem); }
+    .hero__copy .hero__role { font-size: var(--v-t-lg); margin-top: var(--v-6); }
+    .hero__copy .hero__lede { display: none; }
+    .hero__cta { margin-top: var(--v-4); }
+    .demo-for { margin-bottom: var(--v-3); }
+  }
+
+  /* ---- 2. разметка роли (фирменный ход) ------------------------------------ */
+  .score { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(14rem, 19rem); gap: var(--v-7) var(--v-8);
+    align-content: center; width: min(100% - 2 * var(--v-gutter), 80rem); margin-inline: auto; }
+  .score__head { grid-column: 1 / -1; }
+  .score__head h2 { font-size: var(--v-t-xl); line-height: 1.2; margin-top: var(--v-2); max-width: 30ch; }
+  .score__text { font-size: clamp(2rem, 0.9rem + 3.6vw, 4.6rem); line-height: 1.24; letter-spacing: -.02em; font-variation-settings: "opsz" 30; text-wrap: pretty; }
+  .who { font-size: .5em; letter-spacing: .16em; font-style: italic; display: block; margin-bottom: .5em; color: var(--v-ink-soft); }
+  .mk { --t: clamp(0, (var(--v-p, 0) - var(--a)) / (var(--b) - var(--a)), 1); position: relative; white-space: nowrap; }
+  .mk svg { position: absolute; overflow: visible; pointer-events: none; }
+  .mk path { fill: none; stroke: var(--v-accent); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: calc(1 - var(--t)); }
+  .mk--under svg { left: -1%; width: 102%; bottom: -.06em; height: .26em; }
+  .mk--circle svg { left: -4%; top: 2%; width: 108%; height: 104%; }
+  .mk--slash { display: inline-block; width: .55em; height: .9em; vertical-align: -.05em; }
+  .mk--slash svg { inset: 0; width: 100%; height: 100%; }
+  .mk--slash path { stroke-width: 1.1; }
+  .notes { display: flex; flex-direction: column; gap: var(--v-5); align-self: center; border-left: 1px solid var(--v-hair-strong); padding-left: var(--v-5); }
+  .note { font-style: italic; color: var(--v-accent); font-size: var(--v-t-lg); line-height: 1.35; }
+  .note small { display: block; font-style: normal; color: var(--v-ink-soft); font-size: var(--v-t-xs); margin-bottom: .2em; }
+  .score__coda { grid-column: 1 / -1; font-size: var(--v-t-lg); }
+  @media (max-width: 860px) {
+    .score { grid-template-columns: 1fr; gap: var(--v-5); align-content: center; padding-top: 3.5rem; }
+    .score__head h2 { font-size: var(--v-t-lg); }
+    .score__text { font-size: clamp(1.7rem, 7.4vw, 2.3rem); }
+    .notes { flex-direction: column; gap: var(--v-3); }
+    .note { font-size: var(--v-t-base); }
+    .score__coda { font-size: var(--v-t-base); }
+  }
+
+  /* ---- 3. роли ---------------------------------------------------------- */
+  .roles { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--v-7); align-items: start; }
+  .roles__head h2 { font-size: var(--v-t-3xl); line-height: 1; }
+  .roles__head .rem { margin-top: var(--v-4); max-width: 30ch; }
+  .cast { border-top: 1px solid var(--v-hair-strong); }
+  .cast li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-2) var(--v-5); padding: var(--v-5) 0; border-bottom: 1px solid var(--v-hair); }
+  .cast b { font-weight: 400; font-size: var(--v-t-xl); letter-spacing: -.01em; }
+  .cast span { grid-column: 1; color: var(--v-ink-soft); }
+  .cast em { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-variant-numeric: oldstyle-nums; color: var(--v-ink-soft); }
+  .cast__kind { font-style: italic; color: var(--v-ink-soft); font-size: var(--v-t-sm); padding: var(--v-6) 0 var(--v-2); }
+  @media (max-width: 860px) { .roles { grid-template-columns: 1fr; gap: var(--v-6); } .roles__head h2 { font-size: var(--v-t-2xl); } }
+
+  /* ---- 4. фото для кастинга: лента --------------------------------------- */
+  .gal { display: flex; align-items: center; }
+  .rail { align-items: center; padding-inline: var(--v-gutter); gap: var(--v-7); }
+  .rail__intro { width: min(26rem, 80vw); flex: none; }
+  .rail__intro h2 { font-size: var(--v-t-3xl); line-height: 1; }
+  .rail__intro p { margin-top: var(--v-4); }
+  .rail__intro a { display: inline-block; margin-top: var(--v-5); font-style: italic; }
+  .shot { flex: none; margin: 0; }
+  .shot img { height: 72svh; width: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--v-radius); box-shadow: var(--v-e2); background: var(--v-surface); }
+  .shot--low { margin-top: 12svh; }
+  .shot--low img { height: 60svh; }
+  .shot figcaption { margin-top: var(--v-3); }
+  .rail__end { flex: none; width: min(20rem, 70vw); }
+  .rail__end p { font-size: var(--v-t-xl); line-height: 1.25; }
+  .rail__end a { display: inline-block; margin-top: var(--v-4); font-style: italic; }
+  @media (pointer: coarse) {
+    .gal { padding-block: calc(var(--v-section) * .6); }
+    .rail { gap: var(--v-5); }
+    .shot img { height: 58svh; }
+    .shot--low { margin-top: 0; }
+    .shot--low img { height: 58svh; }
+  }
+  @media (max-width: 860px) { .rail__intro h2 { font-size: var(--v-t-2xl); } }
+
+  /* ---- 5. шоурил ------------------------------------------------------------- */
+  .reel__head { display: flex; justify-content: space-between; align-items: end; gap: var(--v-5); flex-wrap: wrap; margin-bottom: var(--v-6); }
+  .reel__head h2 { font-size: var(--v-t-3xl); line-height: 1; }
+  .reel__fig { position: relative; margin: 0; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .reel__fig img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .play { position: absolute; left: var(--v-6); bottom: var(--v-6); display: inline-flex; align-items: center; gap: var(--v-3); }
+  .play svg { width: .8em; height: .8em; fill: currentColor; }
+  @media (max-width: 860px) { .reel__head h2 { font-size: var(--v-t-2xl); } .play { left: var(--v-4); bottom: var(--v-4); } .reel__fig img { aspect-ratio: 4 / 3; } }
+
+  /* ---- 6. данные для кастинга ---------------------------------------------- */
+  .facts { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: var(--v-7); }
+  .facts h2 { font-size: var(--v-t-3xl); line-height: 1; }
+  .facts .rem { margin-top: var(--v-4); max-width: 30ch; }
+  .facts dl { margin: 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); border-top: 1px solid var(--v-hair-strong); }
+  .facts dt, .facts dd { padding: var(--v-4) 0; border-bottom: 1px solid var(--v-hair); margin: 0; }
+  .facts dt { font-style: italic; color: var(--v-ink-soft); padding-right: var(--v-7); }
+  .facts dd { font-size: var(--v-t-lg); }
+  @media (max-width: 860px) {
+    .facts { grid-template-columns: 1fr; gap: var(--v-6); } .facts h2 { font-size: var(--v-t-2xl); }
+    .facts dl { grid-template-columns: 1fr; } .facts dt { border-bottom: 0; padding-bottom: 0; } .facts dd { padding-top: var(--v-1); }
+  }
+
+  /* ---- 7. финал ------------------------------------------------------------ */
+  .close .v-fill picture, .close .v-fill img { display: block; width: 100%; height: 100%; }
+  .close .v-fill img { object-fit: cover; object-position: 70% 50%; }
+  .close__scrim { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, rgb(20 24 30 / .82) 0%, rgb(20 24 30 / .55) 38%, transparent 66%); }
+  .close__copy { color: #eef0ec; top: 50%; bottom: auto; margin-top: -12rem; max-width: 36rem; }
+  .close__copy .rem { color: #b9bfc6; }
+  .close__copy h2 { font-size: var(--v-t-3xl); line-height: 1; margin-top: var(--v-3); }
+  .close__copy p.v-lede { margin-top: var(--v-4); color: #d5d9dd; }
+  .close__copy .v-btn { margin-top: var(--v-6); }
+  .close .v-page a, .close__contacts a { color: #eef0ec; }
+  .close__contacts { display: grid; grid-template-columns: max-content 1fr; gap: var(--v-2) var(--v-5); margin-top: var(--v-6); font-size: var(--v-t-sm); }
+  .close__contacts dt { font-style: italic; color: #b9bfc6; }
+  .close__contacts dd { margin: 0; }
+  .close__contacts .slot { color: #d5d9dd; }
+  .foot { position: absolute; z-index: 3; left: var(--v-gutter); right: var(--v-gutter); bottom: var(--v-4); display: flex; justify-content: space-between; gap: var(--v-4); flex-wrap: wrap;
+    font-size: var(--v-t-xs); color: #b9bfc6; font-style: italic; }
+  @media (max-width: 860px) {
+    .close__scrim { background: linear-gradient(0deg, rgb(20 24 30 / .9) 0%, rgb(20 24 30 / .72) 50%, rgb(20 24 30 / .2) 80%); }
+    .close__copy { top: auto; bottom: 6.5rem; margin-top: 0; }
+    .close__copy h2 { font-size: var(--v-t-2xl); }
+    .foot { flex-direction: column; gap: var(--v-1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__name path { animation: none; stroke-dashoffset: 0; }
+    .mk path { stroke-dashoffset: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__name" href="#top"><span data-slot="Имя Фамилия">Имя Фамилия</span></a>
+    <nav class="bar__nav" aria-label="Разделы">
+      <a href="#roli">Роли</a>
+      <a href="#foto">Фото</a>
+      <a href="#reel">Шоурил</a>
+      <a class="v-btn" href="#proby">Пригласить на пробы</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 1 · КТО ЭТО: живой человек в репетиционном зале, а не афиша -->
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#e7e9e4" aria-label="Имя Фамилия, актёр театра">
+      <div data-v-stage>
+        <div class="hero__photo">
+          <div class="v-layer" data-v-parallax="-0.5">
+            <picture>
+              <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+              <img src="assets/hero.webp" alt="Актёр на репетиции в зале с высокими окнами, в руке листы с текстом роли" width="1920" height="1080" fetchpriority="high">
+            </picture>
+          </div>
+        </div>
+        <div class="hero__wash" aria-hidden="true"></div>
+
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.75 0">
+          <span class="demo-for">Демо для overload224<span class="demo-for__order"> · по заказу «Сайт-визитка для актера театра»</span></span>
+          <span class="rem hero__rem">(Входит. Останавливается у окна.)</span>
+          <h1 class="v-display hero__name"><span data-v-kinetic="lines" data-slot="Имя Фамилия">Имя Фамилия</span><svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 6 C 18 3.5, 40 7.5, 62 5 S 90 3.6, 99 5.4"/></svg></h1>
+          <p class="hero__role">Актёр театра <span class="slot" data-slot="театр">«Название театра»</span>, <span class="slot" data-slot="город">город</span></p>
+          <p class="v-lede hero__lede">Играю в репертуаре театра, пробуюсь в кино и сериалы. Открыт к приглашениям на пробы и в антрепризу.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="#proby" data-v-magnet="0.2" data-v-rise="0">Пригласить на пробы</a>
+            <a class="hero__reel" href="#reel">Смотреть шоурил</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ФИРМЕННЫЙ ХОД: карандаш размечает реплику по мере прокрутки -->
+    <section id="rol" data-v-act="pin" data-v-span="2.8" data-v-drift="#dfe2dc" aria-label="Как я работаю с ролью">
+      <div data-v-stage>
+        <div class="score">
+          <div class="score__head" data-v-cue="0 1 0 0" data-v-rise="0">
+            <span class="rem">(Чехов, «Чайка». Действие первое.)</span>
+            <h2>Роль начинается не с костюма, а с карандаша: где пауза, на каком слове мысль.</h2>
+          </div>
+
+          <p class="score__text" data-v-cue="0 1 0 0" data-v-rise="0">
+            <span class="who">Треплев.</span>
+            <span class="mk mk--under" style="--a:.06;--b:.2">Нужны новые<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 5 C 25 3, 50 7, 75 4.5 S 95 4, 99 5.5"/></svg></span> формы.<span class="mk mk--slash" style="--a:.22;--b:.27" aria-hidden="true"><svg viewBox="0 0 10 20" preserveAspectRatio="none"><path pathLength="1" d="M3.5 18 L6.5 2"/></svg></span>
+            Новые формы <span class="mk mk--under" style="--a:.3;--b:.4">нужны,<svg viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 3.5 C 30 2, 60 5, 99 3.2 M4 8.5 C 35 7, 65 9.5, 96 8"/></svg></span><span class="mk mk--slash" style="--a:.42;--b:.47" aria-hidden="true"><svg viewBox="0 0 10 20" preserveAspectRatio="none"><path pathLength="1" d="M3.5 18 L6.5 2"/></svg></span>
+            а если их нет, то лучше <span class="mk mk--circle" style="--a:.52;--b:.68">ничего<svg viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M70 3 C 30 0, 4 8, 3 20 C 2 33, 40 39, 70 37 C 100 35, 118 28, 116 17 C 114 7, 92 2, 60 4.5"/></svg></span> не&nbsp;нужно.
+          </p>
+
+          <div class="notes">
+            <p class="note" data-v-cue="0.12 0.97 0.06 0.03"><small>над «новые»</small>Ударение здесь, не на «формы»</p>
+            <p class="note" data-v-cue="0.36 0.97 0.06 0.03"><small>после «нужны»</small>Пауза. Ждёт, что мать ответит</p>
+            <p class="note" data-v-cue="0.62 0.97 0.06 0.03"><small>«ничего»</small>Тише. Это не лозунг, а отчаяние</p>
+          </div>
+
+          <p class="score__coda rem" data-v-cue="0.72 0.995 0.05 0.005">(Так роль выглядит до первой репетиции. Дальше – зал, партнёры и режиссёр.)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · РОЛИ: список «действующие лица» -->
+    <section id="roli" class="v-section" data-v-act="flow" data-v-drift="#e7e9e4" aria-label="Роли">
+      <div class="v-wrap roles" data-v-in data-v-stagger="80">
+        <div class="roles__head">
+          <h2>Роли</h2>
+          <p class="rem">(Сначала то, что идёт сейчас. Роль, спектакль, режиссёр, год премьеры.)</p>
+        </div>
+        <div>
+          <ul class="cast" aria-label="В театре">
+            <li><b class="slot" data-slot="роль-1">Роль</b><span>в спектакле <span class="slot" data-slot="спектакль-1">«Название»</span>, реж. <span class="slot" data-slot="режиссёр-1">Фамилия</span></span><em class="slot" data-slot="год-1">год</em></li>
+            <li><b class="slot" data-slot="роль-2">Роль</b><span>в спектакле <span class="slot" data-slot="спектакль-2">«Название»</span>, реж. <span class="slot" data-slot="режиссёр-2">Фамилия</span></span><em class="slot" data-slot="год-2">год</em></li>
+            <li><b class="slot" data-slot="роль-3">Роль</b><span>в спектакле <span class="slot" data-slot="спектакль-3">«Название»</span>, реж. <span class="slot" data-slot="режиссёр-3">Фамилия</span></span><em class="slot" data-slot="год-3">год</em></li>
+          </ul>
+          <p class="cast__kind">Кино и сериалы</p>
+          <ul class="cast" aria-label="Кино и сериалы">
+            <li><b class="slot" data-slot="роль-4">Роль</b><span>в фильме <span class="slot" data-slot="фильм-1">«Название»</span>, реж. <span class="slot" data-slot="режиссёр-4">Фамилия</span></span><em class="slot" data-slot="год-4">год</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ФОТО ДЛЯ КАСТИНГА: лента, боковой ход = выбор -->
+    <section id="foto" data-v-act="pan" data-v-span="3.2" data-v-drift="#dfe2dc" aria-label="Фото для кастинга">
+      <div data-v-stage class="gal">
+        <div class="rail" data-v-pan="0.06">
+          <div class="rail__intro">
+            <h2>Фото для кастинга</h2>
+            <p class="rem">(Без грима и ретуши. Каждое можно скачать в полном размере.)</p>
+            <a href="{{ссылка-фото-архив}}" target="_blank" rel="noopener">Скачать все фото</a>
+          </div>
+          <figure class="shot" data-v-tilt="4"><img src="assets/p1.webp" alt="Портрет актёра анфас на светлом фоне" width="900" height="1200" loading="lazy"><figcaption class="rem">(Анфас.)</figcaption></figure>
+          <figure class="shot shot--low" data-v-tilt="4"><img src="assets/p2.webp" alt="Актёр в профиль у окна читает текст роли" width="900" height="1200" loading="lazy"><figcaption class="rem">(Профиль. С текстом у окна.)</figcaption></figure>
+          <figure class="shot" data-v-tilt="4"><img src="assets/p3.webp" alt="Актёр в пальто в полный рост" width="900" height="1200" loading="lazy"><figcaption class="rem">(В пальто. Для городских ролей.)</figcaption></figure>
+          <div class="rail__end">
+            <p>Нужен другой ракурс или образ – пришлю.</p>
+            <a href="#proby">Написать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ШОУРИЛ: шторка открывает кадр -->
+    <section id="reel" class="v-section" data-v-act="flow" data-v-drift="#e7e9e4" aria-label="Шоурил">
+      <div class="v-wrap">
+        <div class="reel__head" data-v-in>
+          <h2>Шоурил</h2>
+          <p class="rem">(Сцены из спектаклей и самопробы.)</p>
+        </div>
+        <figure class="reel__fig" data-v-reveal="left" data-v-reveal-at="0.12 0.5">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/reel-m.webp">
+            <img src="assets/reel.webp" alt="Кадр с репетиции: актёр произносит реплику, обращаясь к партнёру" width="1920" height="1080" loading="lazy">
+          </picture>
+          <a class="v-btn play" href="{{ссылка-шоурил}}" target="_blank" rel="noopener"><svg viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0 L10 6 L0 12 Z"/></svg>Смотреть шоурил</a>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 6 · ДАННЫЕ: то, что спрашивают на пробах -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#dfe2dc" aria-label="Данные для кастинга">
+      <div class="v-wrap facts" data-v-in data-v-stagger="80">
+        <div>
+          <h2>Для кастинга</h2>
+          <p class="rem">(Коротко о том, что обычно спрашивают до проб.)</p>
+        </div>
+        <dl>
+          <dt>Игровой возраст</dt><dd><span class="slot" data-slot="игровой-возраст">от – до</span></dd>
+          <dt>Рост</dt><dd><span class="slot" data-slot="рост">см</span></dd>
+          <dt>Образование</dt><dd><span class="slot" data-slot="образование">вуз, мастерская, год</span></dd>
+          <dt>Навыки</dt><dd><span class="slot" data-slot="навыки">вокал, сценический бой, верховая езда</span></dd>
+          <dt>Языки</dt><dd><span class="slot" data-slot="языки">языки и уровень</span></dd>
+          <dt>Город</dt><dd><span class="slot" data-slot="город">город</span>, готов к выездам</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ: пустой зал, горит дежурный свет -->
+    <section id="proby" class="close" data-v-act="pin" data-v-span="1.4" data-v-drift="#d7dbd5" aria-label="Пригласить на пробы">
+      <div data-v-stage>
+        <div class="v-fill">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/final-m.webp">
+            <img src="assets/final.webp" alt="Пустой репетиционный зал в сумерках, горит дежурная лампа" width="1920" height="1080" loading="lazy">
+          </picture>
+        </div>
+        <div class="close__scrim" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead close__copy" data-v-cue="0.04">
+          <span class="rem">(Зал пуст. Горит дежурный свет.)</span>
+          <h2>Пригласить на пробы</h2>
+          <p class="v-lede">Напишите, что за проект и когда пробы. Если нужно, запишу самопробы по вашему тексту.</p>
+          <a class="v-btn" href="{{ссылка-связи}}" target="_blank" rel="noopener">Пригласить на пробы</a>
+          <dl class="close__contacts">
+            <dt>Телеграм</dt><dd><a class="slot" href="{{ссылка-связи}}" data-slot="ссылка-связи">@логин</a></dd>
+            <dt>Телефон</dt><dd><a class="slot" href="tel:{{телефон}}" data-slot="телефон">+7 000 000-00-00</a></dd>
+            <dt>Почта</dt><dd><a class="slot" href="mailto:{{почта}}" data-slot="почта">почта</a></dd>
+          </dl>
+        </div>
+        <footer class="foot" data-v-cue="0.04" data-v-rise="0">
+          <span>Имя Фамилия, актёр театра</span>
+          <span>(Фотографии в демо сгенерированы и будут заменены вашими.)</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('rol').setAttribute('data-v-span', '2.4');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки
+  (function () {
+    var bar = document.querySelector('.bar'), on = null;
+    function tick() { var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); } }
+    window.addEventListener('scroll', tick, { passive: true }); tick();
+  })();
+</script>
+</body>
+</html>
